@@ -1,0 +1,23 @@
+/* reset */
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    main{max-width: 1600;}
+
+    img{width: 10%;
+        }
+
+    footer{position: fixed;
+            bottom: 0;
+            width: 100%;}
+
+   h2{
+       text-align: center;
+       font-size: 4em;
+   }
+
+   #id1{display:block;
+        text-align: center;}
+
+  
