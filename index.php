@@ -1,3 +1,7 @@
+<!-- setando hora, sempre em primeiro lugar para que fique mais facil de se localizar/ver -->
+<?php
+ date_default_timezone_set('America/Sao_Paulo')
+?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -31,43 +35,64 @@
           </section> 
             <br>
             <!-- formulario! -->
-            <form>
-                <div class="form-row align-items-center">
-                  <div class="col-auto">
-                    <label class="tx1" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+            <div class="row">
+            <!-- primeira coluna -->
+            <div class="col-3"></div>
+            <!-- segunda coluna -->
+            <div class="col-6">
+            <!-- metodo padrão=GET -->
+            <form method="post"  action="valida_login.php"> 
+                <div class="form-col align-items-center">
+
+                <!-- usuario -->
+                  <div class="col-auto">    
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg></div>
+                        <input type="text" class="form-control mb-" placeholder="USUÁRIO" name="usuario" maxlength="10">
                   </div>
+                  </div>
+                <!-- fim do usuario -->
+                  <br><br>
+                <!-- senha -->
                   <div class="col-auto">
-                    <label class="tx1" for="inlineFormInputGroup">Username</label>
-                    <div class="input-group mb-2">
+                    <div class="input-group mb-4">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">@</div>
+                        <div class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                           <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                          </svg></div>
                       </div>
-                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-                    </div>
+                      <input type="password" class="form-control" placeholder="SENHA" name="senha" minlength="4" maxlength="8">
                   </div>
-                  <div class="col-auto">
-                      </label>
-                    </div>
                   </div>
+                  <!-- fim da senha -->
+
+
+                  <!-- botoes -->
                   <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    <button type="submit" class="btn btn-dark mb-2" title="ENVIE INFORMAÇÕES APARA O SERVIDOR">LOGAR</button>
+
+                    <a href="" class="btn btn-dark mb-2" title="FAÇA SEU CADASTRO AQUI">CADASTRE-SE</a>
+
+                    <a href="" class="btn btn-dark mb-2" title="FAZER A TROCA DA SENHA">ESQUECEU A SENHA</a>
+
+                    <button type="reset" class="btn btn-danger mb-2" title="REMOVE INFORMAÇÕES DIGITADAS">APAGAR</button>
+
+
+
+
                   </div>
                 </div>
-              </form>         
+              </form> 
+              </div>
+              </div>
+
         </section>
 
-        <footer>
-
-        <div class="row">
-
-          <div class="col-4" ><p>LAPA TITO</p></div>
-
-          <div class="col-4"><P>&copy;TI22</P></div>
-
-          <div class="col-4"><P><?php echo date ("d/m/y")?></P></div>
-
-        </footer>
+        <?php
+          include_once "footer.php";
+        ?>
 
     </main>
 

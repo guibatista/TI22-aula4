@@ -3,19 +3,39 @@
     padding: 0;
     box-sizing: border-box;}
 
+
+    body{background-color: grey;}
+
+    img{width: 10%;}
+
     main{max-width: 1600;}
 
-    img{width: 10%;
-        }
+    
+
+    header{position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            background-color: black;
+            color: blueviolet;}
+
+    
 
     footer{position: fixed;
             bottom: 0;
-            width: 100%;}
+            width: 100%;
+            left: 0;
+            background-color: black;
+            color: blueviolet;}
 
-   h2{
-       text-align: center;
-       font-size: 4em;
-   }
+    #lapa{text-align: left;}  
+    #ti{text-align: center;}
+    #data{text-align: right;}
+
+
+   h2{text-align: center;
+       font-size: 4em;}
+       
 
    #id1{display:block;
         text-align: center;}
