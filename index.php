@@ -27,13 +27,15 @@
             <h2>Senac</h2>
         </header>
 
-        <section>
-
-            <!-- img -->
-            <section id="id1">
+   <!-- img -->
+   <section id="id1">
               <img src="assets/imagem/login.png" alt="silhueta de uma pessoa" ></div>
           </section> 
             <br>
+
+        <section>
+
+         
             <!-- formulario! -->
             <div class="row">
             <!-- primeira coluna -->
@@ -73,7 +75,7 @@
                   <div class="col-auto">
                     <button type="submit" class="btn btn-dark mb-2" title="ENVIE INFORMAÇÕES APARA O SERVIDOR">LOGAR</button>
 
-                    <a href="" class="btn btn-dark mb-2" title="FAÇA SEU CADASTRO AQUI">CADASTRE-SE</a>
+                    <a href="cadastro.php" class="btn btn-dark mb-2" title="FAÇA SEU CADASTRO AQUI">CADASTRE-SE</a>
 
                     <a href="" class="btn btn-dark mb-2" title="FAZER A TROCA DA SENHA">ESQUECEU A SENHA</a>
 

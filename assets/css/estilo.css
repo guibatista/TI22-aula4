@@ -6,7 +6,8 @@
 
     body{background-color: grey;}
 
-    img{width: 10%;}
+    img{width: 30%;
+        padding-top: 8%;}
 
     main{max-width: 1600;}
 
@@ -28,16 +29,28 @@
             background-color: black;
             color: blueviolet;}
 
-    #lapa{text-align: left;}  
+    #lapa{text-align: left;
+                padding-left: 25px;}  
     #ti{text-align: center;}
-    #data{text-align: right;}
+    #data{text-align: right;
+                padding-right: 25px;}
 
 
    h2{text-align: center;
-       font-size: 4em;}
+       font-size: 4em;
+       font-style: italic;}
        
 
    #id1{display:block;
         text-align: center;}
 
-  
+        #id2{
+                max-width:320px;
+                max-height:220px;
+                width: auto;
+                height: auto;
+                padding-top: 10%;}
+
+        #div{margin-top: 4%;}
+
+        #apaga{right: 50%;}
