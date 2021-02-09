@@ -37,7 +37,7 @@
 <!-- segunda coluna -->
 <div class="col-6">
 <!-- metodo padrão=GET -->
-<form method="post"  action="atualiza.php"> 
+<form method="post"  action="atualizausuario.php"> 
     <div class="form-col align-items-center">
 
     <!-- usuario -->
@@ -113,7 +113,10 @@
       <div class="col-auto">
         <button type="submit" class="btn btn-dark mb-2" title="ENVIE INFORMAÇÕES APARA O SERVIDOR">ENVIAR</button>
 
-        <button type="reset" class="btn btn-danger mb-2" title="REMOVE INFORMAÇÕES DIGITADAS">APAGAR</button>
+        <a href="index.php" class="btn btn-dark mb-2" title="VOLTE AO INICIO">VOLTAR</a>
+
+        <button id="apagar" type="reset" class="btn btn-danger mb-2" title="REMOVE INFORMAÇÕES DIGITADAS">APAGAR</button>
+
 
 
 
