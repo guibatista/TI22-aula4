@@ -7,11 +7,16 @@ $senha = $_POST['senha'];
 
 // função trim - retira espaços antes e depois //
 // $hashsenha - criptografar //
-$hashsenha = trim(password_hash($senha, PASSWORD_DEFAULT));
+
+
+// saber o motivo de n funcionar 
+// $hashsenha = trim(password_hash($senha, PASSWORD_DEFAULT)); //
+
+
 
 // montar a string $sql com os comandos necessariospara a inserção de um  registro no banco de dados. //
 
-$sql = "INSERT INTO tbl_usuarios (usuario, nome, email, senha) VALUES ('$usuario', '$nome', '$email','$hashsenha')";
+$sql = "INSERT INTO tbl_usuarios (usuario, nome, email, senha) VALUES ('$usuario', '$nome', '$email','$senha')";
 
 // incluir a rotina de conexão com o banco de dados //
 

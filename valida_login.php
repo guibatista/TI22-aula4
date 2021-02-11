@@ -4,18 +4,18 @@
     //$_POST['gui','1234']
 
     $usuario=$_POST['usuario'];
-
     $senha=$_POST['senha'];
 
-    $hashsenha=trim(password_hash($senha, PASSWORD_DEFAULT));
+    // $hashsenha=trim(password_hash($senha, PASSWORD_DEFAULT));
 
-   $sql= "SELECT senha * FROM tbl_usuarios WHERE usuario='$usuario' ";
+    // select-leitura
+   $sql= "SELECT * FROM tbl_usuarios WHERE usuario='$usuario' AND senha='$senha' ";
 
-   include_once "conexao.php" 
+   include_once "conexao.php"; 
 
 // executando //
 
- $resultado = mysqli_query($conn, $sql);
+ $resultado=mysqli_query($conn,$sql);
 
 // verificando se encontrou o usuaio cadastrado na base de dados //
 
@@ -23,25 +23,40 @@ if($campo=mysqli_fetch_array($resultado))
 {
     // enontrou um usuario cadastrado //
 // caso tenha encontrado vamos com para as senhas // 
-if($campo['senha']==password_verify($senha, $hashsenha)  )
-{// a senha está correta //
+
+
+// $hashsenha= $campo['senha'];
+
+// if (password_verify($senha, $hashsenha) )
+// a senha está correta //
 // usuario esta com autorização para entrar //
+
+
+// armazenar o nome do usuario numa variavel de sessao
+// inicializar a sessao
+
+// $_SESSION nome da sessao 
+session_start();
+
+// vamos armazenar o conteudo que esta na variavel $campo na variavel de sessao 
+$_SESSION['nome']= $campo['nome'];
+
 ?>
 <script>
-    alert ("USUARIO LOGADO")    
+    window.location.href="principal.php";    
     </script>
 
     <?php
 }
 
-else {
-    {?>
+ else {
+    ?>
     <script>
-    alert("USUÁRIO NÃO CADASTRADO")
+    alert("USUARIO NAO CADASTRADO");
+    window.location.href="index.php";
     </script>
     <?php
 }
-}
-}
 
+    
 ?>
