@@ -10,13 +10,12 @@ $senha = $_POST['senha'];
 
 
 // saber o motivo de n funcionar 
-// $hashsenha = trim(password_hash($senha, PASSWORD_DEFAULT)); //
-
+$hashsenha = trim(password_hash($senha, PASSWORD_DEFAULT)); 
 
 
 // montar a string $sql com os comandos necessariospara a inserção de um  registro no banco de dados. //
 
-$sql = "INSERT INTO tbl_usuarios (usuario, nome, email, senha) VALUES ('$usuario', '$nome', '$email','$senha')";
+$sql = "INSERT INTO tbl_usuarios (usuario, nome, email, senha) VALUES ('$usuario', '$nome', '$email','$hashsenha')";
 
 // incluir a rotina de conexão com o banco de dados //
 

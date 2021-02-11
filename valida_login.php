@@ -6,21 +6,20 @@
     $usuario=$_POST['usuario'];
     $senha=$_POST['senha'];
 
-    // $hashsenha=trim(password_hash($senha, PASSWORD_DEFAULT));
-
     // select-leitura
-   $sql= "SELECT * FROM tbl_usuarios WHERE usuario='$usuario' AND senha='$senha' ";
+   $sql= "SELECT * FROM tbl_usuarios WHERE usuario='$usuario' ";
 
    include_once "conexao.php"; 
 
 // executando //
 
- $resultado=mysqli_query($conn,$sql);
+ $resultado=mysqli_query($conn, $sql);
 
 // verificando se encontrou o usuaio cadastrado na base de dados //
 
 if($campo=mysqli_fetch_array($resultado))
-{
+
+    if(password_verify($senha, $campo['senha'])){
     // enontrou um usuario cadastrado //
 // caso tenha encontrado vamos com para as senhas // 
 
@@ -52,11 +51,18 @@ $_SESSION['nome']= $campo['nome'];
  else {
     ?>
     <script>
-    alert("USUARIO NAO CADASTRADO");
+    alert("SENHA INCORRETA");
     window.location.href="index.php";
     </script>
     <?php
 }
-
+else {
+    ?>
+    <script>  
+    alert ("USUARIO NAO CADASTRADO!");
+    window.location.href="index.php";
+  </script>
+  <?php
+  }
     
 ?>
