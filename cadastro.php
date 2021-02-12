@@ -87,7 +87,7 @@
                <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
               </svg></div>
           </div>
-          <input type="password" class="form-control" placeholder="SENHA" name="senha" minlength="4" maxlength="8" required>
+          <input type="password" class="form-control" placeholder="SENHA" name="senha" id="senha" minlength="4" maxlength="8" required>
       </div>
       </div>
       <!-- fim da senha -->
@@ -102,7 +102,7 @@
      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
     </svg></div>
           </div>
-          <input type="password" class="form-control" placeholder="CONFIRMAR SENHA" name="confirmarsenha" minlength="4" maxlength="8" required>
+          <input type="password" class="form-control" placeholder="CONFIRMAR SENHA" name="confirmarsenha" id="confirmarsenha" minlength="4" maxlength="8" required>
       </div>
       </div>
 
@@ -111,7 +111,7 @@
 
       <!-- botoes -->
       <div class="col-auto">
-        <button type="submit" class="btn btn-dark mb-2" title="ENVIE INFORMAÇÕES APARA O SERVIDOR">ENVIAR</button>
+        <button type="submit" id="enviar" class="btn btn-dark mb-2" title="ENVIE INFORMAÇÕES APARA O SERVIDOR">ENVIAR</button>
 
         <a href="index.php" class="btn btn-dark mb-2" title="VOLTE AO INICIO">VOLTAR</a>
 
@@ -136,6 +136,9 @@
         ?>
 
     </main>
+
+<!-- meu arquivo JS -->
+  <script src="assets/js/script.js"></script>
 
 <!-- bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
